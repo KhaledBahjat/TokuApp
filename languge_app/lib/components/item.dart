@@ -6,10 +6,11 @@ class Item extends StatelessWidget {
   const Item({
     super.key,
     required this.number,
+    // required this.sound,
   });
 
   final Number number;
-
+  // final String sound;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -53,7 +54,7 @@ class Item extends StatelessWidget {
               onPressed: () {
                 final player = AudioPlayer();
                 player.play(
-                  AssetSource('assets/sounds/numbers/number_eight_sound.mp3'),
+                  AssetSource(number.sound),
                 );
               },
               icon: Icon(
