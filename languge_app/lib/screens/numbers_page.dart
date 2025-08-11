@@ -6,62 +6,62 @@ class NubmersPage extends StatelessWidget {
   
   const NubmersPage({super.key});
  
- final List<Number> numbers = const [
-    Number(
+ final List<ItemModel> numbers = const [
+    ItemModel(
       sound: 'sounds/numbers/number_one_sound.mp3',
       jpName: 'ichi',
       enName: 'one',
       image: 'assets/images/numbers/number_one.png',
     ),
-    Number(
+    ItemModel(
       sound: 'sounds/numbers/number_two_sound.mp3',
       jpName: 'Ni',
       enName: 'two',
       image: 'assets/images/numbers/number_two.png',
     ),
-    Number(
+    ItemModel(
       sound: 'sounds/numbers/number_three_sound.mp3',
       jpName: 'San',
       enName: 'three',
       image: 'assets/images/numbers/number_three.png',
     ),
-    Number(
+    ItemModel(
       sound: 'sounds/numbers/number_four_sound.mp3',
       jpName: 'Shi',
       enName: 'four',
       image: 'assets/images/numbers/number_four.png',
     ),
-    Number(
+    ItemModel(
       sound: 'sounds/numbers/number_five_sound.mp3',
       jpName: 'Go',
       enName: 'five',
       image: 'assets/images/numbers/number_five.png',
     ),
-    Number(
+    ItemModel(
       sound: 'sounds/numbers/number_six_sound.mp3',
       jpName: 'Roku',
       enName: 'six',
       image: 'assets/images/numbers/number_six.png',
     ),
-    Number(
+    ItemModel(
       sound: 'sounds/numbers/number_seven_sound.mp3',
       jpName: 'Sebun',
       enName: 'seven',
       image: 'assets/images/numbers/number_seven.png',
     ),
-    Number(
+    ItemModel(
       sound: 'sounds/numbers/number_eight_sound.mp3',
       jpName: 'hachi',
       enName: 'eight',
       image: 'assets/images/numbers/number_eight.png',
     ),
-    Number(
+    ItemModel(
       sound: 'sounds/numbers/number_nine_sound.mp3',
       jpName: 'Kyū',
       enName: 'nine',
       image: 'assets/images/numbers/number_nine.png',
     ),
-    Number(
+    ItemModel(
       sound: 'sounds/numbers/number_ten_sound.mp3',
       jpName: 'Jū',
       enName: 'ten',
@@ -80,7 +80,7 @@ class NubmersPage extends StatelessWidget {
         itemCount: numbers.length,
         itemBuilder: (BuildContext context, int index) {
           return Item(
-            number: numbers[index],
+            obj: numbers[index], color:  Color(0xfff99531),
           );
         },
       ),

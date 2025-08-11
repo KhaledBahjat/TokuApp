@@ -5,22 +5,24 @@ import 'package:languge_app/models/number.dart';
 class Item extends StatelessWidget {
   const Item({
     super.key,
-    required this.number,
+    required this.obj,
+    required this.color,
     // required this.sound,
   });
 
-  final Number number;
+  final ItemModel obj;
+  final Color color;
   // final String sound;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      color: Color(0xfff99531),
+      color: color,
       child: Row(
         children: [
           Container(
             color: Color(0xffFFF6DC),
-            child: Image.asset(number.image),
+            child: Image.asset(obj.image),
           ),
 
           Padding(
@@ -29,14 +31,14 @@ class Item extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  number.jpName,
+                  obj.jpName,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                   ),
                 ),
                 Text(
-                  number.enName,
+                  obj.enName,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
@@ -54,7 +56,7 @@ class Item extends StatelessWidget {
               onPressed: () {
                 final player = AudioPlayer();
                 player.play(
-                  AssetSource(number.sound),
+                  AssetSource(obj.sound),
                 );
               },
               icon: Icon(
