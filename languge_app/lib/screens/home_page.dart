@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:languge_app/components/category_item.dart';
-import 'package:languge_app/screens/famely_members.dart';
+import 'package:languge_app/screens/colors_page.dart';
+import 'package:languge_app/screens/family_members.dart';
 import 'package:languge_app/screens/numbers_page.dart';
+import 'package:languge_app/screens/phrases_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -40,10 +42,22 @@ class HomePage extends StatelessWidget {
             text: 'Family Members',
           ),
           Category(
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ColorsPage(),
+              ),
+            ),
             color: Color(0xff7d3fa2),
             text: 'Colors',
           ),
           Category(
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PhrasesPage(),
+              ),
+            ),
             color: Color(0xff47a5cb),
             text: 'Phrases',
           ),

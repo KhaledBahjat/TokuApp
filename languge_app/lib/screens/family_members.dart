@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:languge_app/components/item.dart';
-import 'package:languge_app/models/number.dart';
+import 'package:languge_app/models/iteam_model.dart';
 
 class FamelyMembersPage extends StatelessWidget {
   const FamelyMembersPage({super.key});
@@ -72,7 +72,7 @@ class FamelyMembersPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FamelyMembers'),
+        title: Text('FamilyMembers'),
         backgroundColor: Color(0xff46322B),
       ),
       body: ListView.builder(

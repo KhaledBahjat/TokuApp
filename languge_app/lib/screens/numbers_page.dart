@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:languge_app/components/item.dart';
-import 'package:languge_app/models/number.dart';
+import 'package:languge_app/models/iteam_model.dart';
 
 class NubmersPage extends StatelessWidget {
   

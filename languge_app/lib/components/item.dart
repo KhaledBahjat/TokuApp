@@ -1,6 +1,7 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:languge_app/models/number.dart';
+import 'package:languge_app/components/item_info.dart';
+import 'package:languge_app/models/iteam_model.dart';
 
 class Item extends StatelessWidget {
   const Item({
@@ -22,52 +23,12 @@ class Item extends StatelessWidget {
         children: [
           Container(
             color: Color(0xffFFF6DC),
-            child: Image.asset(obj.image),
+            child: Image.asset(obj.image!),
           ),
-
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  obj.jpName,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
-                ),
-                Text(
-                  obj.enName,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          Spacer(),
-
-          Padding(
-            padding: EdgeInsetsGeometry.only(right: 15),
-            child: IconButton(
-              onPressed: () {
-                final player = AudioPlayer();
-                player.play(
-                  AssetSource(obj.sound),
-                );
-              },
-              icon: Icon(
-                Icons.play_arrow,
-                color: Colors.white,
-                size: 30,
-              ),
-            ),
-          ),
+          Expanded(child: ItemInfo(obj: obj)),
         ],
       ),
     );
   }
 }
+
