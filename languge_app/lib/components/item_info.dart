@@ -1,4 +1,3 @@
-
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:languge_app/models/iteam_model.dart';
@@ -38,12 +37,7 @@ class ItemInfo extends StatelessWidget {
         Padding(
           padding: EdgeInsetsGeometry.only(right: 15),
           child: IconButton(
-            onPressed: () {
-              final player = AudioPlayer();
-              player.play(
-                AssetSource(obj.sound),
-              );
-            },
+            onPressed: obj.playSound,
             icon: Icon(
               Icons.play_arrow,
               color: Colors.white,
